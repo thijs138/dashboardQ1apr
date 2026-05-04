@@ -850,82 +850,117 @@ new Chart(document.getElementById('c9'),{type:'doughnut',data:{labels:['Geen geh
 </tbody></table></div>
 
 <script>
-// ===== APRIL DATA =====
+// ===== APRIL + NEW CONVERSIONS =====
 const APR_ADV = {"Cristian": {"ingemeten": 60, "besteld": 39, "niet": 21, "conv": 65.0, "waarde_in": 110748, "waarde_best": 66813, "conv_waarde": 60.3, "nabellen_benaderd": 10, "nabellen_besteld": 0, "nabellen_conv": 0.0, "provincies": {"Flevoland": {"i": 3, "b": 1, "c": 33.3}, "Gelderland": {"i": 7, "b": 5, "c": 71.4}, "Noord-Brabant": {"i": 16, "b": 12, "c": 75.0}, "Noord-Holland": {"i": 4, "b": 4, "c": 100.0}, "Overijssel": {"i": 7, "b": 6, "c": 85.7}, "Utrecht": {"i": 11, "b": 9, "c": 81.8}, "Zuid-Holland": {"i": 8, "b": 2, "c": 25.0}}}, "Dennis": {"ingemeten": 48, "besteld": 31, "niet": 17, "conv": 64.6, "waarde_in": 114727, "waarde_best": 56077, "conv_waarde": 48.9, "nabellen_benaderd": 11, "nabellen_besteld": 3, "nabellen_conv": 27.3, "provincies": {"Gelderland": {"i": 10, "b": 6, "c": 60.0}, "Noord-Holland": {"i": 2, "b": 2, "c": 100.0}, "Overijssel": {"i": 32, "b": 20, "c": 62.5}, "Utrecht": {"i": 3, "b": 2, "c": 66.7}}}, "Jeffrey": {"ingemeten": 63, "besteld": 45, "niet": 18, "conv": 71.4, "waarde_in": 85201, "waarde_best": 50832, "conv_waarde": 59.7, "nabellen_benaderd": 6, "nabellen_besteld": 0, "nabellen_conv": 0.0, "provincies": {"België": {"i": 22, "b": 13, "c": 59.1}, "Gelderland": {"i": 1, "b": 1, "c": 100.0}, "Limburg": {"i": 28, "b": 23, "c": 82.1}, "Noord-Brabant": {"i": 6, "b": 3, "c": 50.0}, "Overijssel": {"i": 1, "b": 1, "c": 100.0}}}, "Michel": {"ingemeten": 62, "besteld": 41, "niet": 21, "conv": 66.1, "waarde_in": 123210, "waarde_best": 77105, "conv_waarde": 62.6, "nabellen_benaderd": 9, "nabellen_besteld": 1, "nabellen_conv": 11.1, "provincies": {"Drenthe": {"i": 3, "b": 2, "c": 66.7}, "Flevoland": {"i": 5, "b": 3, "c": 60.0}, "Fryslân": {"i": 11, "b": 7, "c": 63.6}, "Gelderland": {"i": 3, "b": 2, "c": 66.7}, "Groningen": {"i": 8, "b": 6, "c": 75.0}, "Noord-Holland": {"i": 4, "b": 3, "c": 75.0}, "Overijssel": {"i": 25, "b": 16, "c": 64.0}}}, "Peter": {"ingemeten": 43, "besteld": 24, "niet": 19, "conv": 55.8, "waarde_in": 75119, "waarde_best": 38534, "conv_waarde": 51.3, "nabellen_benaderd": 6, "nabellen_besteld": 0, "nabellen_conv": 0.0, "provincies": {"Gelderland": {"i": 10, "b": 6, "c": 60.0}, "Limburg": {"i": 1, "b": 0, "c": 0.0}, "Noord-Brabant": {"i": 8, "b": 5, "c": 62.5}, "Noord-Holland": {"i": 1, "b": 0, "c": 0.0}, "Overijssel": {"i": 6, "b": 3, "c": 50.0}, "Utrecht": {"i": 10, "b": 8, "c": 80.0}, "Zuid-Holland": {"i": 3, "b": 0, "c": 0.0}}}, "Quinten": {"ingemeten": 43, "besteld": 27, "niet": 16, "conv": 62.8, "waarde_in": 73255, "waarde_best": 42252, "conv_waarde": 57.7, "nabellen_benaderd": 7, "nabellen_besteld": 1, "nabellen_conv": 14.3, "provincies": {"België": {"i": 2, "b": 2, "c": 100.0}, "Noord-Brabant": {"i": 7, "b": 5, "c": 71.4}, "Utrecht": {"i": 1, "b": 0, "c": 0.0}, "Zeeland": {"i": 5, "b": 2, "c": 40.0}, "Zuid-Holland": {"i": 22, "b": 16, "c": 72.7}}}, "Ramon": {"ingemeten": 43, "besteld": 27, "niet": 16, "conv": 62.8, "waarde_in": 69496, "waarde_best": 42305, "conv_waarde": 60.9, "nabellen_benaderd": 2, "nabellen_besteld": 0, "nabellen_conv": 0.0, "provincies": {"Drenthe": {"i": 10, "b": 7, "c": 70.0}, "Fryslân": {"i": 4, "b": 2, "c": 50.0}, "Groningen": {"i": 2, "b": 1, "c": 50.0}, "Overijssel": {"i": 26, "b": 17, "c": 65.4}}}, "Remco": {"ingemeten": 72, "besteld": 45, "niet": 27, "conv": 62.5, "waarde_in": 137871, "waarde_best": 72955, "conv_waarde": 52.9, "nabellen_benaderd": 14, "nabellen_besteld": 1, "nabellen_conv": 7.1, "provincies": {"Flevoland": {"i": 8, "b": 4, "c": 50.0}, "Gelderland": {"i": 5, "b": 5, "c": 100.0}, "Noord-Holland": {"i": 39, "b": 23, "c": 59.0}, "Overijssel": {"i": 1, "b": 1, "c": 100.0}, "Utrecht": {"i": 9, "b": 7, "c": 77.8}, "Zuid-Holland": {"i": 7, "b": 3, "c": 42.9}}}, "Torsten": {"ingemeten": 39, "besteld": 19, "niet": 20, "conv": 48.7, "waarde_in": 75966, "waarde_best": 23124, "conv_waarde": 30.4, "nabellen_benaderd": 7, "nabellen_besteld": 0, "nabellen_conv": 0.0, "provincies": {"Gelderland": {"i": 2, "b": 0, "c": 0.0}, "Noord-Holland": {"i": 11, "b": 5, "c": 45.5}, "Overijssel": {"i": 9, "b": 5, "c": 55.6}, "Utrecht": {"i": 1, "b": 1, "c": 100.0}, "Zuid-Holland": {"i": 14, "b": 8, "c": 57.1}}}};
 const APR_PROV = {"België": {"i": 24, "b": 15, "c": 62.5}, "Drenthe": {"i": 13, "b": 9, "c": 69.2}, "Flevoland": {"i": 16, "b": 8, "c": 50.0}, "Fryslân": {"i": 15, "b": 9, "c": 60.0}, "Gelderland": {"i": 38, "b": 25, "c": 65.8}, "Groningen": {"i": 10, "b": 7, "c": 70.0}, "Limburg": {"i": 29, "b": 23, "c": 79.3}, "Noord-Brabant": {"i": 37, "b": 25, "c": 67.6}, "Noord-Holland": {"i": 61, "b": 37, "c": 60.7}, "Overijssel": {"i": 107, "b": 69, "c": 64.5}, "Utrecht": {"i": 35, "b": 27, "c": 77.1}, "Zeeland": {"i": 5, "b": 2, "c": 40.0}, "Zuid-Holland": {"i": 54, "b": 29, "c": 53.7}};
 const NC_DATA = [{"naam": "Danny Scholing", "ordernummer": "300439334", "maand": "Januari", "adviseur": "Ramon", "waarde": 2926.0, "contact": "Mail", "reden": "Is er nog mee bezig"}, {"naam": "Petra Krudde", "ordernummer": "300441858", "maand": "Februari", "adviseur": "Torsten", "waarde": 2713.0, "contact": "Mail", "reden": "Geen gehoor"}, {"naam": "Martijn Visser", "ordernummer": "300444033", "maand": "Februari", "adviseur": "Ramon", "waarde": 1627.0, "contact": "Mail", "reden": "Geen gehoor"}, {"naam": "Melanie De Graaf", "ordernummer": "300446616", "maand": "Maart", "adviseur": "Torsten", "waarde": 4457.9, "contact": "Bellen", "reden": "Geen gehoor"}, {"naam": "Olaf Corduwener", "ordernummer": "300449873", "maand": "Maart", "adviseur": "Jeffrey", "waarde": 4230.65, "contact": "Mail", "reden": ""}, {"naam": "Anneke Rietman", "ordernummer": "300452886", "maand": "Maart", "adviseur": "Cristian", "waarde": 1361.0, "contact": "Mail", "reden": "Geen gehoor"}, {"naam": "Asli Akyol", "ordernummer": "300451792", "maand": "Maart", "adviseur": "Remco", "waarde": 1135.0, "contact": "Bellen", "reden": "Overig (reden plaatsen in blad 'redenen')"}, {"naam": "Ingeborg Bloem", "ordernummer": "300454701", "maand": "Maart", "adviseur": "Remco", "waarde": 1490.0, "contact": "Mail", "reden": "Is er nog mee bezig"}, {"naam": "Eline Kleinman", "ordernummer": "300446160", "maand": "Maart", "adviseur": "Michel", "waarde": 585.0, "contact": "Mail", "reden": ""}];
-const APR_NAMES = ['Cristian','Dennis','Jeffrey','Michel','Peter','Quinten','Ramon','Remco','Torsten'];
+const APR_REDENEN = {"Geen gehoor": 31, "Is er nog mee bezig": 21, "Overig (reden plaatsen in blad 'redenen')": 4, "Ziet ervan af": 3, "Gaat bestellen": 2, "Uitstel vanwege andere prioriteiten": 2, "Wacht op korting": 1, "Nogmaals meten": 1, "Technisch (lege winkelwagen/ niet inloggen/ contact)": 1};
+const APR_BOM = {"Mail": 76, "Bellen": 17};
+const APR_NAMES = ["Cristian","Dennis","Jeffrey","Michel","Peter","Quinten","Ramon","Remco","Torsten"];
 const APR_Q1_REF = {Cristian:80.2,Dennis:81.0,Jeffrey:71.5,Michel:74.5,Peter:73.8,Quinten:70.9,Ramon:81.6,Remco:68.6,Torsten:63.7};
 
-function showSubTab(id,el){
-  document.querySelectorAll('#page-april .sub-page').forEach(p=>p.style.display='none');
-  document.querySelectorAll('#page-april .sub-tab').forEach(t=>{t.style.borderBottomColor='transparent';t.style.color='#999';});
-  document.getElementById('sub-'+id).style.display='block';
-  el.style.borderBottomColor='#9c27b0';el.style.color='#9c27b0';
+var _aprInited = {};
+function _ic(id,fn){if(!_aprInited[id]){_aprInited[id]=true;fn();}}
+
+function initAprAdvCharts(){
+  _ic("cAprAdv",function(){
+    var cols=APR_NAMES.map(function(a){var c=APR_ADV[a]?APR_ADV[a].conv:0;return c>=75?"#27ae60":c>=65?"#F59901":c>=55?"#ff9800":"#ef5350";});
+    new Chart(document.getElementById("cAprAdv"),{
+      type:"bar",
+      data:{labels:APR_NAMES,datasets:[
+        {label:"April %",data:APR_NAMES.map(function(a){return APR_ADV[a]?APR_ADV[a].conv:0;}),backgroundColor:cols,borderRadius:4},
+        {label:"Q1 gem.",data:APR_NAMES.map(function(a){return APR_Q1_REF[a]||74.6;}),backgroundColor:"rgba(45,45,45,0.2)",borderColor:"#2D2D2D",borderWidth:1.5}
+      ]},
+      options:{responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:"bottom",labels:{boxWidth:12,font:{size:11}}},tooltip:{callbacks:{label:function(ctx){return ctx.dataset.label+": "+ctx.raw+"%";}}}},
+        scales:{x:{ticks:{autoSkip:false}},y:{min:30,max:100,grid:{color:"#f0f0f0"},ticks:{callback:function(v){return v+"%";}}}}}
+    });
+  });
+  _ic("cAprWaarde",function(){
+    new Chart(document.getElementById("cAprWaarde"),{
+      type:"bar",
+      data:{labels:APR_NAMES,datasets:[
+        {label:"Ingemeten",data:APR_NAMES.map(function(a){return APR_ADV[a]?APR_ADV[a].waarde_in:0;}),backgroundColor:"#e1bee7"},
+        {label:"Besteld",data:APR_NAMES.map(function(a){return APR_ADV[a]?APR_ADV[a].waarde_best:0;}),backgroundColor:"#9c27b0"}
+      ]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+        scales:{x:{ticks:{autoSkip:false}},y:{grid:{color:"#f0f0f0"},ticks:{callback:function(v){return "\u20AC"+Math.round(v/1000)+"k";}}}}}
+    });
+  });
 }
 
-// April adviseur bar chart
-const aprColors = APR_NAMES.map(a=>{const c=APR_ADV[a]?.conv||0;return c>=75?'#27ae60':c>=65?'#F59901':c>=55?'#ff9800':'#ef5350';});
-const aprQ1Ref = APR_NAMES.map(a=>APR_Q1_REF[a]||74.6);
-new Chart(document.getElementById('cAprAdv'),{
-  type:'bar',
-  data:{labels:APR_NAMES,datasets:[
-    {label:'April %',data:APR_NAMES.map(a=>APR_ADV[a]?.conv||0),backgroundColor:aprColors},
-    {label:'Q1 gem.',data:aprQ1Ref,backgroundColor:'rgba(45,45,45,0.25)',borderColor:'#2D2D2D',borderWidth:1.5,type:'bar'}
-  ]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}},tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw+'%'}}}},
-    scales:{x:{ticks:{autoSkip:false}},y:{min:30,max:100,grid:{color:'#f0f0f0'},ticks:{callback:v=>v+'%'}}}}
-});
+function initAprProvCharts(){
+  _ic("cAprProv",function(){
+    var s=Object.entries(APR_PROV).sort(function(a,b){return b[1].c-a[1].c;});
+    new Chart(document.getElementById("cAprProv"),{
+      type:"bar",
+      data:{labels:s.map(function(x){return x[0];}),datasets:[{data:s.map(function(x){return x[1].c;}),
+        backgroundColor:s.map(function(x){return x[1].c>=75?"#27ae60":x[1].c>=65?"#F59901":x[1].c>=55?"#ff9800":"#ef5350";})}]},
+      options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return s[ctx.dataIndex][1].c+"% ("+s[ctx.dataIndex][1].b+"/"+s[ctx.dataIndex][1].i+")";}}}},
+        scales:{x:{min:0,max:110,ticks:{callback:function(v){return v+"%";}},grid:{color:"#f0f0f0"}},y:{ticks:{autoSkip:false,font:{size:11}}}}}
+    });
+  });
+}
 
-// April waarde chart
-new Chart(document.getElementById('cAprWaarde'),{
-  type:'bar',
-  data:{labels:APR_NAMES,datasets:[
-    {label:'Ingemeten',data:APR_NAMES.map(a=>APR_ADV[a]?.waarde_in||0),backgroundColor:'#e1bee7'},
-    {label:'Besteld',data:APR_NAMES.map(a=>APR_ADV[a]?.waarde_best||0),backgroundColor:'#9c27b0'}
-  ]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{autoSkip:false}},y:{grid:{color:'#f0f0f0'},ticks:{callback:v=>'€'+Math.round(v/1000)+'k'}}}}
-});
+function initAprNabCharts(){
+  _ic("cAprBom",function(){
+    new Chart(document.getElementById("cAprBom"),{
+      type:"doughnut",
+      data:{labels:["📧 Mail ("+(APR_BOM.Mail||0)+"x)","📞 Bellen ("+(APR_BOM.Bellen||0)+"x)"],
+        datasets:[{data:[APR_BOM.Mail||0,APR_BOM.Bellen||0],backgroundColor:["#1565c0","#F59901"],borderWidth:3,borderColor:"#fff"}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{font:{size:11},boxWidth:12}}}}
+    });
+  });
+  _ic("cAprReden",function(){
+    var rl=Object.keys(APR_REDENEN).map(function(r){return r.length>22?r.substring(0,22)+"...":r;});
+    new Chart(document.getElementById("cAprReden"),{
+      type:"doughnut",
+      data:{labels:rl,datasets:[{data:Object.values(APR_REDENEN),
+        backgroundColor:["#2D2D2D","#F59901","#e74c3c","#95a5a6","#27ae60","#F9CD92","#9b59b6","#3498db","#1abc9c"],borderWidth:2,borderColor:"#fff"}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:"right",labels:{font:{size:10},boxWidth:10}}}}
+    });
+  });
+}
 
-// April provincie chart
-const aprProvSorted = Object.entries(APR_PROV).sort((a,b)=>b[1].c-a[1].c);
-new Chart(document.getElementById('cAprProv'),{
-  type:'bar',
-  data:{labels:aprProvSorted.map(x=>x[0]),datasets:[{data:aprProvSorted.map(x=>x[1].c),backgroundColor:aprProvSorted.map(x=>x[1].c>=75?'#27ae60':x[1].c>=65?'#F59901':x[1].c>=55?'#ff9800':'#ef5350')}]},
-  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>aprProvSorted[ctx.dataIndex][1].c+'% ('+aprProvSorted[ctx.dataIndex][1].b+'/'+aprProvSorted[ctx.dataIndex][1].i+')'  }}}},
-    scales:{x:{min:0,max:110,ticks:{callback:v=>v+'%'},grid:{color:'#f0f0f0'}},y:{ticks:{autoSkip:false,font:{size:11}}}}}
-});
+function initNcCharts(){
+  _ic("cNcMethod",function(){
+    new Chart(document.getElementById("cNcMethod"),{
+      type:"doughnut",
+      data:{labels:["📧 Mail (7x)","📞 Bellen (2x)"],
+        datasets:[{data:[7,2],backgroundColor:["#1565c0","#F59901"],borderWidth:3,borderColor:"#fff"}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{font:{size:12},boxWidth:12}}}}
+    });
+  });
+  _ic("cNcMaand",function(){
+    var nm={Januari:0,Februari:0,Maart:0};
+    NC_DATA.forEach(function(x){if(nm[x.maand]!==undefined)nm[x.maand]++;});
+    new Chart(document.getElementById("cNcMaand"),{
+      type:"bar",
+      data:{labels:Object.keys(nm),datasets:[{data:Object.values(nm),backgroundColor:"#1565c0",borderRadius:6}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+        scales:{y:{min:0,max:5,ticks:{stepSize:1},grid:{color:"#f0f0f0"}}}}
+    });
+  });
+}
 
-// April bel/mail donut
-const bomData = {"Mail": 76, "Bellen": 17};
-new Chart(document.getElementById('cAprBom'),{
-  type:'doughnut',
-  data:{labels:['📧 Mail ('+bomData.Mail+'x)','📞 Bellen ('+(bomData.Bellen||0)+'x)'],datasets:[{data:[bomData.Mail||0,bomData.Bellen||0],backgroundColor:['#1565c0','#F59901'],borderWidth:3,borderColor:'#fff'}]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:11},boxWidth:12}}}}
-});
+function showSubTab(id,el){
+  document.querySelectorAll("#page-april .sub-page").forEach(function(p){p.style.display="none";});
+  document.querySelectorAll("#page-april .sub-tab").forEach(function(t){t.style.borderBottomColor="transparent";t.style.color="#999";});
+  document.getElementById("sub-"+id).style.display="block";
+  el.style.borderBottomColor="#9c27b0";
+  el.style.color="#9c27b0";
+  if(id==="apr-adv") initAprAdvCharts();
+  else if(id==="apr-prov") initAprProvCharts();
+  else if(id==="apr-nab") initAprNabCharts();
+}
 
-// April redenen
-const aprRedenen = {"Geen gehoor": 31, "Is er nog mee bezig": 21, "Overig (reden plaatsen in blad 'redenen')": 4, "Ziet ervan af": 3, "Gaat bestellen": 2, "Uitstel vanwege andere prioriteiten": 2, "Wacht op korting": 1, "Nogmaals meten": 1, "Technisch (lege winkelwagen/ niet inloggen/ contact)": 1};
-new Chart(document.getElementById('cAprReden'),{
-  type:'doughnut',
-  data:{labels:Object.keys(aprRedenen).map(r=>r.length>20?r.substring(0,20)+'...':r),datasets:[{data:Object.values(aprRedenen),backgroundColor:['#2D2D2D','#F59901','#e74c3c','#95a5a6','#27ae60','#F9CD92','#9b59b6','#3498db','#1abc9c'],borderWidth:2,borderColor:'#fff'}]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:10},boxWidth:10}}}}
-});
-
-// New conv charts
-const NC_MAIL=7,NC_BELLEN=2;
-new Chart(document.getElementById('cNcMethod'),{
-  type:'doughnut',
-  data:{labels:['📧 Mail ('+NC_MAIL+'x)','📞 Bellen ('+NC_BELLEN+'x)'],datasets:[{data:[NC_MAIL,NC_BELLEN],backgroundColor:['#1565c0','#F59901'],borderWidth:3,borderColor:'#fff'}]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:12},boxWidth:12}}}}
-});
-const ncMaandCount={Januari:0,Februari:0,Maart:0};
-NC_DATA.forEach(x=>{if(ncMaandCount[x.maand]!==undefined)ncMaandCount[x.maand]++;});
-new Chart(document.getElementById('cNcMaand'),{
-  type:'bar',
-  data:{labels:Object.keys(ncMaandCount),datasets:[{data:Object.values(ncMaandCount),backgroundColor:'#1565c0',borderRadius:6}]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{min:0,max:5,ticks:{stepSize:1},grid:{color:'#f0f0f0'}}}}
-});
+var _origSP = showPage;
+showPage = function(id,el){
+  _origSP(id,el);
+  if(id==="april"){setTimeout(function(){initAprAdvCharts();},80);}
+  if(id==="nieuw"){setTimeout(function(){initNcCharts();},80);}
+};
 </script>
 </body>
 </html>

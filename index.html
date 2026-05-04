@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard (Auto vanuit Bellijst)</title>
+<title>Dashboard (Q1 + April geïntegreerd)</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
@@ -15,13 +15,13 @@ body{font-family:Arial;background:#f4f4f2;margin:0;padding:20px}
 </head>
 <body>
 
-<h2>Dashboard (Automatisch vanuit Bellijst)</h2>
+<h2>Dashboard Q1 + April (volledig geïntegreerd)</h2>
 
 <input type="file" id="fileInput" />
 
-<div class="kpi">Ingemeten: <strong id="kpi_ing">-</strong></div>
-<div class="kpi">Besteld: <strong id="kpi_best">-</strong></div>
-<div class="kpi">Conversie: <strong id="kpi_conv">-</strong></div>
+<div class="kpi">Totaal ingemeten (Q1 + April): <strong id="kpi_ing">-</strong></div>
+<div class="kpi">Totaal besteld (Q1 + April): <strong id="kpi_best">-</strong></div>
+<div class="kpi">Conversie totaal: <strong id="kpi_conv">-</strong></div>
 
 <canvas id="chart"></canvas>
 
@@ -48,8 +48,9 @@ function processData(rows){
   const unique = {};
 
   rows.forEach(r => {
-    const key = r['Order'] || r['Klant'] || JSON.stringify(r);
-    unique[key] = r; // laatste overschrijft
+    // sleutel bepalen (pas aan indien nodig)
+    const key = r['Order'] || r['Ordernummer'] || r['Klant'] || JSON.stringify(r);
+    unique[key] = r; // laatste status wint (dus updates verwerkt)
   });
 
   const orders = Object.values(unique);
@@ -69,7 +70,7 @@ function renderChart(ing, best){
   new Chart(document.getElementById('chart'),{
     type:'bar',
     data:{
-      labels:['Ingemeten','Besteld'],
+      labels:['Ingemeten totaal','Besteld totaal'],
       datasets:[{data:[ing,best]}]
     }
   });
